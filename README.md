@@ -92,6 +92,30 @@ Per model:
 - 5-fold cross‑validation accuracy
 - ROC curve visualization
 
+## Streamlit Web App (Interactive Demo)
+
+A lightweight UI to classify any input summary as real or fake using the saved TF‑IDF Logistic Regression pipeline.
+
+### Launch
+
+Option 1: Conda (recommended)
+
+```markdown
+conda env create -f environment.yml  # creates env named 'impostor-hunt'
+# If environment.yml defines a different name, adjust below:
+conda activate impostor-hunt
+streamlit run src/app.py
+```
+
+Then open the local URL (usually `http://localhost:8501`).  
+Enter text, submit: the app computes required numeric features and feeds them to the stored Pipeline.
+
+### App Features
+
+- Uses stored `logistic_regression_tfidf_more_features.joblib` pipeline (no manual vectorization needed).
+- Displays predicted class plus probability of each class.
+- Simple, reproducible feature construction (length + avg word length).
+
 ## Test Inference & Submission
 
 From [notebooks/Modeling.ipynb](notebooks/Modeling.ipynb):
