@@ -16,7 +16,6 @@ Goal: For each test sample (pair of two article variants) predict which file (`f
   - `create_dataset.ipynb` – builds processed train/test datasets
   - `Tradition_ML.ipynb` – traditional feature engineering + baseline modeling
   - `Modeling.ipynb` – TF‑IDF & embedding pipelines, model training & inference
-- (Add `requirements.txt` if needed)
 
 ## Problem Framing
 
