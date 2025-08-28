@@ -130,20 +130,20 @@ From [notebooks/Modeling.ipynb](notebooks/Modeling.ipynb):
 
 ## Reproducibility
 
-1. (Optional) Create environment:
+1. Create environment:
 
-   ```markdown
-   python -m venv .venv
-   .venv/Scripts/activate (Windows) or source .venv/bin/activate (Unix)
-   pip install -U pip
-   pip install pandas numpy scikit-learn sentence-transformers matplotlib
-   ```
+```markdown
+conda env create -f environment.yml  # creates env named 'impostor-hunt'
+# If environment.yml defines a different name, adjust below:
+conda activate impostor-hunt
+streamlit run src/app.py
+```
 
-2. Run notebooks in order:
+3. Run notebooks in order:
    - `notebooks/create_dataset.ipynb`
    - `notebooks/Tradition_ML.ipynb`
    - `notebooks/Modeling.ipynb`
-3. Upload chosen submission file to Kaggle.
+4. Upload chosen submission file to Kaggle.
 
 ## Future Improvements
 
